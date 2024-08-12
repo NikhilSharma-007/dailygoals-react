@@ -1,38 +1,62 @@
+/* Reset default styles */
 * {
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
+/* Import additional fonts */
 @import url("https://fonts.googleapis.com/css2?family=Economica&family=Grape+Nuts&family=Roboto:wght@100;300;400;700;900&display=swap");
 
+/* Set gradient background for the entire page */
+body {
+  background: linear-gradient(
+    to right,
+    #86a8e7,
+    #91eae4
+  ); /* Gradient from soft blue to light green */
+}
+
+/* Navigation styles */
 nav {
-  background-color: rgb(44, 30, 242);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+  color: #2e3a4d; /* Dark gray text */
   padding: 10px;
   text-align: center;
 }
 
+/* Container styles */
 .container {
-  background-color: rgb(255, 236, 226);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly transparent white background */
   width: 70%;
   margin: auto;
   min-height: 100vh;
   padding: 4vmax 8vmax;
-  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
 }
 
-.container > form {
+/* Form styles */
+.container form {
   display: flex;
   flex-direction: column;
 }
 
-.container > h1 {
+/* Heading styles */
+.container h1 {
   text-align: center;
   margin: 30px;
   font-size: 2.5rem;
+  color: #2e3a4d; /* Dark gray text */
 }
 
+/* Input, textarea, and button styles */
 input,
 textarea,
 button {
@@ -42,20 +66,28 @@ button {
   margin: 10px 0;
   font-size: 1.2rem;
 }
+
 button {
   border: none;
   cursor: pointer;
-  background-color: rgb(37, 37, 37);
+  background-color: #5d93e1; /* Blue */
   color: white;
 }
 
+/* Task styles */
 .task {
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly transparent white background */
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
 }
 
 .task > div {
@@ -63,18 +95,20 @@ button {
 }
 
 .task span {
-  color: rgba(0, 0, 0, 0.673);
+  color: #6e7a8a; /* Gray text */
 }
+
 .task button {
-  border-radius: 100%;
+  border-radius: 50%;
   width: 30px;
   height: 30px;
   font-size: 1.6rem;
-  background-color: crimson;
+  background-color: #f76d57; /* Coral */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .task button:hover {
-  background-color: red;
+  background-color: #fa5540; /* Darker coral on hover */
 }

@@ -7,7 +7,6 @@ const Task = ({ title, description, deleteTask, index }) => {
         <p>{title}</p>
         <span>{description}</span>
       </div>
-
       <button onClick={() => deleteTask(index)}>-</button>
     </div>
   );

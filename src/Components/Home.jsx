@@ -5,7 +5,6 @@ const Home = () => {
   const initialArray = localStorage.getItem("tasks")
     ? JSON.parse(localStorage.getItem("tasks"))
     : [];
-
   const [tasks, setTasks] = useState(initialArray);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -18,10 +17,11 @@ const Home = () => {
   };
 
   const deleteTask = (index) => {
-    const filteredArr = tasks.filter((val, i) => {
+    const filteredArray = tasks.filter((val, i) => {
       return i !== index;
     });
-    setTasks(filteredArr);
+
+    setTasks(filteredArray);
   };
 
   useEffect(() => {
@@ -30,7 +30,6 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h1>DAILY GOALS</h1>
       <form onSubmit={submitHandler}>
         <input
           type="text"
@@ -43,8 +42,7 @@ const Home = () => {
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
-
-        <button type="submit">ADD</button>
+        <button>ADD</button>
       </form>
 
       {tasks.map((item, index) => (
